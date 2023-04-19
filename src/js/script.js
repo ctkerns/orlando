@@ -99,23 +99,23 @@ jQuery(function($) {
 
     function system() {
       html.removeClass(['theme-dark', 'theme-light']);
-      localStorage.removeItem('attila_theme');
+      localStorage.removeItem('orlando_theme');
       toggleText.text(toggle.attr('data-system'));
     }
 
     function dark() {
       html.removeClass('theme-light').addClass('theme-dark');
-      localStorage.setItem('attila_theme', 'dark');
+      localStorage.setItem('orlando_theme', 'dark');
       toggleText.text(toggle.attr('data-dark'));
     }
 
     function light() {
       html.removeClass('theme-dark').addClass('theme-light');
-      localStorage.setItem('attila_theme', 'light');
+      localStorage.setItem('orlando_theme', 'light');
       toggleText.text(toggle.attr('data-light'));
     }
 
-    switch (localStorage.getItem('attila_theme')) {
+    switch (localStorage.getItem('orlando_theme')) {
       case 'dark':
         dark();
       break;
