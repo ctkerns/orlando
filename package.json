@@ -1,7 +1,11 @@
 {
   "name": "orlando",
   "description": "Ghost Theme",
-  "version": "development",
+  "author": {
+	"name": "Christopher Kerns",
+    "email": "noreply@ctkerns.site"
+  },
+  "version": "0.0.1",
   "engines": {
     "ghost": ">=5.0.0"
   },
