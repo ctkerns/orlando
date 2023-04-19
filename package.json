@@ -5,6 +5,7 @@
   "engines": {
     "ghost": ">=5.0.0"
   },
+  "keywords": ["ghost-theme"],
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "grunt": "^1.5.3",
