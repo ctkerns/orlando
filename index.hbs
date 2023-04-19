@@ -26,9 +26,11 @@
 
 	{{#get "tags"}}
     	{{#foreach "tags"}}
-			<font color = {{accent_color}}>
-        		<p>{{name}}</p>
-			</font>
+			{{#tag}}
+				<font color = {{accent_color}}>
+        			<p>{{name}}</p>
+				</font>
+			{{/tag}}
     	{{/foreach}}
 	{{/get}}
 
