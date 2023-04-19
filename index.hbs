@@ -21,6 +21,20 @@
 	</div>
 </header>
 
+<div class="nav-header">
+	<nav class="nav-wrapper"></nav>
+
+	{{#get "tags"}}
+    	{{#foreach "tags"}}
+			<font color = {{accent_color}}>
+        		<p>{{name}}</p>
+			</font>
+    	{{/foreach}}
+	{{/get}}
+
+	<div class="nav-wrapper-control"></div>
+</div>
+
 <div id="index" class="container">
 
 	<main class="content" role="main">
