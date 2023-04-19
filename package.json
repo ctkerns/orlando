@@ -1,36 +1,9 @@
 {
-  "name": "attila",
+  "name": "orlando",
   "description": "Ghost Theme",
-  "demo": "https://attila.peteramende.de",
-  "version": "3.6.1",
+  "version": "development",
   "engines": {
     "ghost": ">=5.0.0"
-  },
-  "license": "MIT",
-  "screenshots": {
-    "desktop": "src/screenshot-desktop.jpg",
-    "mobile": "src/screenshot-mobile.jpg"
-  },
-  "author": {
-    "name": "Peter Amende",
-    "email": "hey@peteramende.de",
-    "url": "https://peteramende.de"
-  },
-  "gpm": {
-    "type": "theme",
-    "categories": [
-      "Minimal",
-      "Personal Blogs"
-    ]
-  },
-  "keywords": [
-    "ghost-theme",
-    "ghost",
-    "theme"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zutrinken/attila.git"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
