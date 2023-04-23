@@ -21,26 +21,25 @@
 	</div>
 </header>
 
-<div class="nav-header">
-	<nav class="nav-wrapper"></nav>
+<body>
+	<div id="main-selection" class="inner">
+		<form id="tag-tabs">
+			{{#get "tags" filter="description:front_page"}}
+			    {{#foreach tags}}
+					<input type="radio" id="{{slug}}" name="tag-tabs">
+					<label for="{{slug}}">{{name}}</label>
+			    {{/foreach}}
+			{{/get}}
+		</form>
+	</div>
 
-	{{#get "tags"}}
-    	{{#foreach "tags"}}
-			{{log "Hello?"}}
-			{{log this}}
-			<p>{{name}}</p>
-    	{{/foreach}}
-	{{/get}}
+	<div id="index" class="container">
 
-	<div class="nav-wrapper-control"></div>
-</div>
+		<main class="content" role="main">
 
-<div id="index" class="container">
+			{{> "loop"}}
 
-	<main class="content" role="main">
+		</main>
 
-		{{> "loop"}}
-
-	</main>
-
-</div>
+	</div>
+</body>

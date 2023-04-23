@@ -1,7 +1,31 @@
 jQuery(function($) {
 
-  var html = $('html');
-  var viewport = $(window);
+	var html = $('html');
+	var viewport = $(window);
+
+	// Everything here I am adding for the Orlando theme.
+
+	// Filter the posts by the provided tag.
+	function filter_by_tag(tag_slug) {
+		$.ajax({
+			url: '/tag/' + tag_slug,
+			type: 'GET',
+			dataType: 'html',
+			success: function(response) {
+				var $newPosts = $(response).find('.post');
+				$('.post').remove(); // Remove existing posts
+				$('.extra-pagination').after($newPosts); // Append new posts
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+				console.log(textStatus, errorThrown);
+			}
+		});
+	}
+
+	$('#tag-tabs input[type=radio]').click(function() {
+		var tag_slug = $(this).attr("id");
+		filter_by_tag(tag_slug)
+	});
 
 /* ==========================================================================
    Menu

@@ -10,6 +10,40 @@ $breakpoint-large: 960px;
 $breakpoint-medium: 640px;
 $breakpoint-small: 480px;
 $inner: calc(64rem + 8vw);
+
+// Everything here I am adding for Orlando theme.
+#main-selection {
+	width: 100%;
+	padding: 0 0;
+}
+
+#tag-tabs {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#tag-tabs input[type=radio] {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+
+#tag-tabs label {
+	flex: 1;
+	display: inline-block;
+	font-size: 1.4em;
+	text-align: center;
+	padding: 0.5rem;
+	border: 1px solid var(--color-content-secondary);
+	border-radius: 0px 0px 6px 6px;
+	cursor: pointer;
+}
+
+#tag-tabs input[type="radio"]:checked + label {
+	background-color: var(--color-background-contrast);
+}
+
 /* ==========================================================================
    Basics
    ========================================================================== */
