@@ -129,7 +129,6 @@ module.exports = function(grunt) {
     'sass:dev',
     'postcss:dev',
     'copy:dev',
-    'uglify',
-    'watch'
+    'uglify'
   ]);
 };
