@@ -6,25 +6,37 @@ jQuery(function($) {
 	// Everything here I am adding for the Orlando theme.
 
 	// Filter the posts by the provided tag.
-	function filter_by_tag(tag_slug) {
-		$.ajax({
-			url: '/tag/' + tag_slug,
-			type: 'GET',
-			dataType: 'html',
-			success: function(response) {
-				var $newPosts = $(response).find('.post');
-				$('.post').remove(); // Remove existing posts
-				$('.extra-pagination').after($newPosts); // Append new posts
-			},
-			error: function(jqXHR, textStatus, errorThrown) {
-				console.log(textStatus, errorThrown);
+	function filter_by_tag(tagSlug) {
+		// Get all the posts.
+		var posts = $(".post");
+
+		posts.each(function() {
+			var hasTag = true;
+			var post = $(this);
+
+			if (tagSlug !== "all") {
+				// Get list of tags as strings.
+				var tags = post.data('tags').split('|');
+				tags.pop();
+
+				hasTag = false;
+				for (tag of tags) {
+					if (tag === tagSlug)
+						hasTag = true;
+				}
+			}
+
+			if (!hasTag) {
+				post.hide();
+			} else {
+				post.show();
 			}
 		});
 	}
 
 	$('#tag-tabs input[type=radio]').click(function() {
-		var tag_slug = $(this).attr("id");
-		filter_by_tag(tag_slug)
+		var tagSlug = $(this).attr("id");
+		filter_by_tag(tagSlug)
 	});
 
 /* ==========================================================================

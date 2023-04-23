@@ -24,10 +24,11 @@
 <body>
 	<div id="main-selection" class="inner">
 		<form id="tag-tabs" autocomplete="off">
+			<input type="radio" id="all" name="tag-tabs" checked>
+			<label for="all">All</label>
 			{{#get "tags" filter="description:front_page" visibility="internal"}}
 			    {{#foreach tags}}
-					<input type="radio" id="{{slug}}" name="tag-tabs"
-						{{#has slug="all"}}checked{{/has}}>
+					<input type="radio" id="{{slug}}" name="tag-tabs">
 					<label for="{{slug}}">{{name}}</label>
 			    {{/foreach}}
 			{{/get}}

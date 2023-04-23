@@ -4,7 +4,7 @@
 
 {{#foreach posts visibility="all"}}
 
-<article class="{{post_class}}">
+<article class="{{post_class}}" data-tags="{{#foreach tags}}{{slug}}|{{/foreach}}">
 	<div class="inner">
 		<div class="box post-box">
 			<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
