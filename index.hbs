@@ -24,7 +24,7 @@
 <body>
 	<div id="main-selection" class="inner">
 		<form id="tag-tabs" autocomplete="off">
-			{{#get "tags" filter="description:front_page"}}
+			{{#get "tags" filter="description:front_page" visibility="internal"}}
 			    {{#foreach tags}}
 					<input type="radio" id="{{slug}}" name="tag-tabs"
 						{{#has slug="all"}}checked{{/has}}>
